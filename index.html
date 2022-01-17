@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="ProjectAlarm.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>TIME IS RUNNING</h1>
+    <!-- Displaying the Analog Clock -->
+    <div id="clock">
+        <div id="hourstick"></div>
+        <div id="minutestick"></div>
+        <div id="secondstick"></div>
+    </div>
+<br>
+    
+    <div class="d-grid gap-2" id="setter">
+        <!-- <input type="datetime-local" id="inputTime"> -->
+        <input id="inputTime" type="time" name="appt-time" step="2">
+        <button  onclick="setAlarm(this);" id="setbtn" class="btn btn-primary" type="button" ml-5>Set Alarm</button>
+      </div>
+    <!-- <button onclick="setAlarm(this);" id="setbtn">Set Alarm</button> -->
+
+
+    <div id="option" style="display: none;" class="d-grid gap-2 col-6 mx-auto">
+        <button onclick="Snooze()" id="Snooze" class="btn btn-primary" type="button">Snooze</button>
+        <button onclick="Stop()" id="Stop" class="btn btn-primary" type="button">Stop</button>
+    </div>
+    
+    <div id="Alarm_List">
+        <h2>Upcoming Alarms</h2>
+        <ul class="alarmlist">
+            <li id="mylist">  </li>
+        </ul>
+    </div>
+
+    <script src="ProjectAlarm.js"></script>
+</body>
+
+</html>
